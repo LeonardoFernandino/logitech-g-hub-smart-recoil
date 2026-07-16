@@ -23,10 +23,17 @@ O grande diferencial deste projeto é a aplicação rigorosa de conceitos de QA 
 
 ### 1. Gestão Ágil e Rastreabilidade (Trello)
 O ciclo de desenvolvimento foi gerenciado em um quadro Kanban, conectando requisitos de negócio, critérios de aceite e bugs encontrados:
-*   **`[US-01]` Controle de Recuo Inteligente:** Requisitos de negócio do ponto de vista do usuário.
-*   **`[BUG-01]` Falha de retenção de estado (Race Condition):** Bug físico que travava a mira no segundo clique de mira rápida (resolvido com loop `while`).
-*   **`[BUG-02]` Falha de Desligamento no Modo Alternativo:** Bug onde o Botão 9 apenas alternava para o modo normal em vez de desligar o sistema completo.
-*   **`[BUG-03]` Bypass de Inicialização (Ativação Involuntária):** Bug onde o Botão 8 ativava o recuo mesmo com o sistema desligado no Botão 9.
+*   **`[US-01]` Controle de Recuo Inteligente:** Requisitos de negócio mapeados a partir do ponto de vista e das necessidades do usuário final.
+*   **`[BUG-01]` Falha de retenção de estado no segundo clique de mira rápida (Race Condition):** Bug físico que travava o movimento do mouse na segunda tentativa de clique rápido (resolvido com transição para loop `while`).
+*   **`[FEAT-01]` Implementação do Modo de Recuo Alternativo Leve (Botão 8):** Adição de um perfil de compensação vertical reduzido, ideal para armas de menor calibre.
+*   **`[REF-01]` Refatoração para Loop Síncrono e Mecanismo de Reset de Estado (LUA):** Reestruturação completa do fluxo de repetição do script para garantir estabilidade e eliminar concorrência.
+*   **`[BUG-02]` Falha de restauração de estado anterior ao sair do Modo Alternativo:** Correção lógica para memorizar e restaurar o estado original do recuo padrão ao desativar o modo leve.
+*   **`[BUG-03]` Desvio de trajetória no recuo alternativo (Compensação Horizontal ausente):** Ajuste fino das coordenadas de movimento horizontal (X) no modo leve para manter a suavidade padrão.
+*   **`[FEAT-02]` Sistema de Feedback Visual por Emojis no Console de Log:** Integração de logs limpos e iconizados com emojis para indicar as mudanças de estado físico do script.
+*   **`[REFACTOR-02]` Remoção de Dead Code (Variável Rapidfire):** Limpeza de variáveis e lógicas obsoletas que não faziam parte do escopo de uso do software.
+*   **`[REFACTOR-03]` Eliminação de Logs de Eventos Gerais (Console Clean):** Desativação de logs redundantes do mouse que poluíam o console do G-Hub a cada clique físico.
+*   **`[BUG-04]` Botão 9 falha em desligar o script se o Modo Alternativo estiver ativo:** Correção do bug herdado onde o botão de desligar apenas revertia para o modo normal em vez de cessar todo o sistema.
+*   **`[BUG-05]` Botão 8 permite bypass e ativa o recuo com o sistema desligado:** Implementação de trava de segurança para impedir que o perfil alternativo fosse ativado se a chave geral estivesse em `OFF`.
 
 ### 2. Evolução de Arquitetura e Soluções (Thread-Safe)
 
