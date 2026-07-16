@@ -40,7 +40,7 @@ if event == "MOUSE_BUTTON_PRESSED" and arg == 8 then
         -- ... lógica de alternância
     end
 end
-
+```
 ## 📋 Cenários de Teste Aplicados (Sanity & Regressão)
 
 | ID do Cenário | Descrição do Teste | Tipo de Teste | Resultado Esperado | Status |
