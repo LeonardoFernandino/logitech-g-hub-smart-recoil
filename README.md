@@ -55,7 +55,13 @@ end
 
 ## 💻 Como Utilizar este Script
 
+Siga o passo a passo abaixo para carregar o script com segurança no seu software:
+
 1. Abra o software **Logitech G-Hub**.
-2. Vá no menu de **Perfis** do jogo desejado e clique em **Scripting (Programação)**.
-3. Crie um novo script e cole o código do arquivo `script.lua` deste repositório.
-4. Salve (`Ctrl + S`) e mantenha o console de script aberto para visualizar os logs de troca de modos e ativação.
+2. Na tela inicial, clique na barra de **Perfis** no topo para abrir a janela de **All Games & Apps** (Todos os Jogos e Aplicativos).
+3. Selecione o jogo desejado (ou o perfil **Desktop**) e, no cartão do perfil correspondente (ex: **Default**), clique no ícone de **três pontos verticais (`⋮`)**.
+4. No menu suspenso que aparecer, clique em **Create LUA Script** (Criar Script LUA) para abrir o editor de programação.
+5. No editor que abrir, delete qualquer código padrão existente e cole o conteúdo do arquivo `script.lua` deste repositório.
+6. Salve o script pressionando as teclas **`Ctrl + S`** no seu teclado.
+7. Mantenha o console do editor aberto para acompanhar em tempo real os logs visuais com emojis durante a gameplay.
+8. Lembre-se de que você precisa ter um mouse Logitech para conseguir utilizar e testar este script!
