@@ -57,7 +57,7 @@ end
 | **TC-03** | Alternar para Modo Alternativo (Botão 8) e atirar. | Funcional | O recuo deve compensar de forma leve (`Modo Alternativo ❄️`). | **PASSOU** ✅ |
 | **TC-04** | Desativar o script (Botão 9) enquanto estiver no Modo Alternativo (Botão 8). | Regressão | O script deve desligar completamente (Logs: `OFF 🔴`) em vez de apenas voltar para o modo normal. | **PASSOU** ✅ |
 | **TC-05** | Pressionar o Botão 8 com o sistema desligado (Botão 9 em OFF). | Caixa-Preta / Transição | O comando do Botão 8 deve ser ignorado. O script deve continuar 100% inativo. | **PASSOU** ✅ |
-
+| **TC-06** | Alternar do Modo Alternativo de volta para o Modo Normal (Botão 8). | Regressão / Funcional | O sistema deve restaurar com sucesso o estado do recuo anterior e reativar a oscilação horizontal de peso 4 (Modo Normal 🔥). | PASSOU ✅ |
 ---
 
 ## 💻 Como Utilizar este Script
